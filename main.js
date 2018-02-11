@@ -106,9 +106,15 @@ function initTest(){
         event.stopPropagation();
         msg = this.nextElementSibling.nextElementSibling.nextElementSibling;
         
+        if (this.value.length > this.maxLength){
+            this.value = this.value.slice(0, this.maxLength);
+        }   
+
         if(event.keyCode != 8 && event.keyCode != 0 && (event.keyCode < 48 || event.keyCode > 57)){
+            this.value = this.value.replace(/[^0-9]/g,'');   
             msg.innerHTML = "숫자만 입력해주세요!";
             msg.style.opacity = '0';
+            return false;
         }
          
     }
@@ -155,8 +161,8 @@ function initTest(){
     btnStart.forEach( el => el.addEventListener("click", startQuestion));
     btnPrev.addEventListener("click", updateQuestion);
     btnNext.addEventListener("click", updateQuestion);
-    valAge.addEventListener("keypress", checkNumber);
-    valChildbirthAge.addEventListener("keypress", checkNumber);
+    valAge.addEventListener("keyup", checkNumber);
+    valChildbirthAge.addEventListener("keyup", checkNumber);
     msg.forEach( el => el.addEventListener("transitionend", () => { el.style.opacity = '1'; el.innerHTML ="";}));
     
 }

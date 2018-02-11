@@ -32,11 +32,11 @@
                             </li>
                             <li>
                                 <p class="question">현재 나이를 입력해 주세요<br/>(만 나이로 입력)</p>                    
-                                <p class="answer"><input type="number" name="" id="valAge" maxlength="2"><span>세</span><br/><span class="msg"></span></p>
+                                <p class="answer"><input type="number" pattern="^[0-9]*$" id="valAge" min="1" max="99"  maxlength="2"><span>세</span><br/><span class="msg"></span></p>
                             </li>
                             <li>
                                 <p class="question">첫 출산 연령을 입력해 주세요<br/>(출산 경험이 없는 경우 00을 입력)<p>
-                                <p class="answer"><input type="number" name="" id="valChildbirthAge" maxlength="2"><span>세</span><br/><span class="msg"></span></p> 
+                                <p class="answer"><input type="number" pattern="^[0-9]*$" id="valChildbirthAge" min="0" max="99"  maxlength="2" ><span>세</span><br/><span class="msg"></span></p> 
                             </li>
                         </ul>
                     </div>

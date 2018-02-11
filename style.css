@@ -39,14 +39,15 @@ button {border:none;}
 .list_info li:after {display:block;clear:both;content:"";}
 .list_info .question {float:left;width:70%;text-align:left;}
 .list_info .answer {float:right;width:30%;text-align:left;}
-.list_info .answer input{margin-right:10px;}
+.list_info .answer input{margin-right:10px;width:120px;}
+.list_info .answer input[type="number"] {ime-mode:disabled;}
 .box_range {width:60%;margin:60px auto 0px;}
 .box_range .min {float:left;}
 .box_range .max {float:right;}
 .box_range .line {display:inline-block;position:relative;width:80%;height:1px;margin-bottom:5px;background:#999999;}
 .box_range .line:before {display:inline-block;position:absolute;top:-8px;left:-1px;content:"<";color:#999999;}
 .box_range .line:after {display:inline-block;position:absolute;top:-8px;right:-1px;content:">";color:#999999;}
-.msg {transition:opacity 2s;font-size:10px;color:#a166e7;}
+.msg {transition:opacity 3s;font-size:10px;color:#a166e7;}
 .score_total {font-size:100px;}
 .score_total span {font-size:30px;}
 .txt_desc, txt_rec {width:80%;margin:0 auto;}
